@@ -1,0 +1,23 @@
+{
+  "id": 2,
+  "title": "项目2",
+  "shortDescription": "这是项目1的简短描述",
+  "fullDescription": "这是项目1的详细描述,包括背景、目标和技术栈等信息...",
+  "thumbnail": "res/project2/3.png",
+  "hoverImage": "res/project2/4.png",  
+  "mainImage": "res/project2/4.png",
+  "category": "App",
+  "date": "2023-01-15",
+  "popularity": 95,
+  "features": [
+      "功能1",
+      "功能2",
+      "功能3"
+  ],
+  "links": {
+      "github": "https://github.com/username/project1",
+      "demo": "https://demo.project1.com",
+      "blog": "https://blog.com/project1-article"
+  },
+  "keywords": ["关键词2"]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35岁危机应对小组</title>
+    <meta name="description" content="展示我的个人项目集合,包括Web开发、移动应用等多个领域的作品。">
+    <meta name="keywords" content="个人项目,作品集,Web开发,移动应用">
+    <link rel="icon" href="res/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="res/web_logo.png" alt="Logo" class="logo">
+                <h1>TEAM 35</h1>
+            </div>
+            <div class="header-right">
+                <!-- 新增首页按钮 -->
+                <!-- <button id="homeButton">首页</button> -->
+                <button id="instructionsButton">关于本站</button>
+                <button id="contactButton">交流群</button>
+            </div>
+        </div>
+    </header>
+    <!-- 新增说明弹窗 -->
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>为什么创建本站？</h2>
+            <p>人总归会有35岁危机，</p>
+            <p>提前准备总归是好的。</p>
+        </div>
+    </div>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>交流群</h2>
+            <img src="res/me.jpg" alt="联系我们" id="contactImage">
+        </div>
+    </div>
+    <div class="filters-section">
+        <!-- <div class="search-wrapper">
+            <i class="search-icon">🔍</i>
+            <input type="text" id="search" placeholder="搜索项目...">
+        </div> -->
+        <div id="tags-container" class="filter-container"></div>
+        <div id="categories-container" class="filter-container"></div>
+    </div>
+
+    <main>
+        <div id="projects-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
