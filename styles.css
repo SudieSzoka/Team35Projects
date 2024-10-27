@@ -454,27 +454,20 @@ h1 {
         align-items: stretch;  /* 新增 */
     }
     
-    /* nav {
-        flex-direction: column;
-        align-items: stretch;
-        margin-top: 0.8rem;  
-    } */
-    /* .filters-section {
-        margin: 0.5rem 1rem;
-        padding: 0 1rem;
-    } */
-    /* .search-wrapper {
-        flex: none;
-        margin-right: 0;  
-    } */
-    
     .filter-container {
         overflow-x: auto;
         padding-bottom: 0.5rem;
         justify-content: flex-start; /* 移动端靠左对齐，方便滚动 */
         flex-wrap: nowrap; /* 移动端不换行 */
     }
+    #projects-grid {
+        grid-template-columns: 1fr;  /* 改为单列 */
+        padding: 0.5rem;  /* 减小内边距 */
+    }
 
+    .project-card {
+        margin: 0 0.5rem;  /* 左右添加一点边距 */
+    }
     .project-content {
         grid-template-columns: 1fr;
         gap: 2rem;
