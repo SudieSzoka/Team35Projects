@@ -1,0 +1,19 @@
+{
+  "id": "ZhihuCard",
+  "title": "知乎问答卡片",
+  "shortDescription": "在知乎回答下插入按钮，点击后一键下载为图片。",
+  "fullDescription": "在知乎回答下插入按钮，点击后一键下载为图片。\n支持部分格式设置，\n不支持图片内容。",
+  "thumbnail": "res/知乎问答卡片/按钮位置.png",
+  "hoverImage": "res/知乎问答卡片/下载示例.png",  
+  "mainImage": "res/知乎问答卡片/下载示例.png",
+  "category": "Chrome插件",
+  "date": "2024-10-28",
+  "popularity": 95,
+  "features": [
+      "一键下载知乎问答为图片"
+  ],
+  "links": {
+      "Chrome插件商店": "https://chromewebstore.google.com/detail/%E7%9F%A5%E4%B9%8E%E9%97%AE%E7%AD%94%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90%E5%99%A8/ljgbfeakcaeegbnjiakgcdcaddaldjjj?utm_source=ext_app_menu"
+  },
+  "keywords": ["关键词2"]
+}
