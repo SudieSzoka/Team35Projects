@@ -44,7 +44,9 @@ function displayProjectDetails(project) {
     detailsContainer.innerHTML = `
         <div class="project-container">
             <div class="project-header">
-                <h2 class="project-title">${project.title}</h2>
+                <div class="project-title-container">
+                    <h2 class="project-title">${project.title}</h2>
+                </div>
                 <div class="project-divider"></div>
             </div>
             
@@ -84,10 +86,47 @@ function displayProjectDetails(project) {
     `;
 }
 
-// 初始化
-loadProjectDetails();
+// 深色模式切换
+function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
 
-// 添加首页按钮功能
-document.getElementById('homeButton').addEventListener('click', function() {
-    window.location.href = 'index.html';
+// 初始化深色模式
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
+// 等待DOM加载完成
+document.addEventListener('DOMContentLoaded', function() {
+    // 事件监听器
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // 添加首页按钮功能
+    document.getElementById('homeButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+
+    // 初始化
+    initTheme();
+    loadProjectDetails();
 });
+
+// 分享项目
+function shareProject(projectId) {
+    const project = projects.find(p => p.id === projectId);
+    if (project) {
+        const shareText = `${project.title}\n${project.shortDescription}\n${window.location.origin}/project.html?project=${project.fileName}`;
+        navigator.clipboard.writeText(shareText).then(() => {
+            alert('项目链接已复制到剪贴板！');
+        }).catch(err => {
+            console.error('复制失败:', err);
+            alert('复制失败，请手动复制链接。');
+        });
+    }
+}
